@@ -17,13 +17,15 @@ import json
 
 #CONFIGURABLE PARAMETERS
 #-*-/-*-\-*--*-/-*-\-*--*-/-*-\-*--*-/-*-\-*--*-/-*-\-*--*-/-*-\-*--*-/-*-\-*--*-/-*-\-*-
-BOARD_TITLE = 'Bowdoin'
-STOP_ID = 'place-wondl'
-DIRECTION_ID = '0'
+BOARD_TITLE = 'Bon Air'
+API_KEY = 'QK3n4Cr23BURNkfRyWBC2HQS6'
+STOP_ID = '99904'
+DIRECTION_ID = 'Inbound'
+RTPI_FEED = 'Light%20Rail'
 ROUTE = 'Blue'
 BACKGROUND_IMAGE = 'TBlue-dashboard.bmp'
 PAGE_LIMIT = '3'
-DATA_SOURCE = 'https://api-v3.mbta.com/predictions?filter%5Bstop%5D='+STOP_ID+'&filter%5Bdirection_id%5D='+DIRECTION_ID+'&filter%5Broute%5D='+ROUTE+'&page%5Blimit%5D='+PAGE_LIMIT+'&sort=departure_time'
+DATA_SOURCE = 'https://realtime.portauthority.org/bustime/api/v3/getpredictions?key='+API_KEY+'&rtpidatafeed='+RTPI_FEED+'&stpid='+STOP_ID
 UPDATE_DELAY = 15
 SYNC_TIME_DELAY = 30
 MINIMUM_MINUTES_DISPLAY = 9
